@@ -12,6 +12,12 @@ body {
 .square {
   width: 100px;
   height: 100px;
-  background-color: yellow;
-  transition: transform 0.25s ease-in-out, background-color 0.25s;
+  background-image: linear-gradient(yellow, orange);
+  transition: all 2s;
+  transition-behavior: allow-discrete;
+}
+
+.square:hover {
+  background-image: linear-gradient(purple, skyblue);
+  transform: translateX(100px);
 }
