@@ -28,3 +28,12 @@
 //     }
 //   });
 // });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const element = document.querySelector(".square");
+  const toggleBtn = document.querySelector(".toggleBtn");
+
+  toggleBtn.addEventListener("click", (e) => {
+    element.classList.toggle("hide");
+  });
+});
