@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const squareElem = document.querySelector(".square");
   const toggleBtn = document.querySelector(".toggleBtn");
   const addBtn = document.querySelector(".addBtn");
+  const circle = document.querySelector(".circle");
 
   toggleBtn.addEventListener("click", (e) => {
     squareElem.classList.toggle("hide");
@@ -44,5 +45,10 @@ document.addEventListener("DOMContentLoaded", () => {
     newSquare.classList.add("square");
 
     wrapperElem.appendChild(newSquare);
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    console.log("mouse_move");
+    circle.style.transform = `translateY(${e.clientY}px) translateX(${e.clientX}px)`;
   });
 });
