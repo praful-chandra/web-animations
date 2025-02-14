@@ -30,10 +30,19 @@
 // });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const element = document.querySelector(".square");
+  const wrapperElem = document.querySelector(".wrapper");
+  const squareElem = document.querySelector(".square");
   const toggleBtn = document.querySelector(".toggleBtn");
+  const addBtn = document.querySelector(".addBtn");
 
   toggleBtn.addEventListener("click", (e) => {
-    element.classList.toggle("hide");
+    squareElem.classList.toggle("hide");
+  });
+
+  addBtn.addEventListener("click", (e) => {
+    const newSquare = document.createElement("div");
+    newSquare.classList.add("square");
+
+    wrapperElem.appendChild(newSquare);
   });
 });
